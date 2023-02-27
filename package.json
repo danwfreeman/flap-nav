@@ -1,0 +1,42 @@
+{
+  "name": "flap-nav",
+  "version": "1.0.4",
+  "description": "Build a navigation menu from a json config",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.cjs.js",
+  "scripts": {
+    "build": "rollup -c --bundleConfigAsCjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danwfreeman/flap-nav.git"
+  },  
+  "keywords": [
+    "navigation",
+    "html",
+    "css",
+    "json",
+    "menu"
+  ],
+  "author": "Dan Freeman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danwfreeman/flap-nav/issues"
+  },
+  "homepage": "https://github.com/danwfreeman/flap-nav#readme",
+  "dependencies": {
+    "@babel/runtime": "^7.12.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
+    "@babel/plugin-transform-runtime": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@rollup/plugin-babel": "^6.0.3",
+    "autoprefixer": "^10.4.13",
+    "rollup": "^3.17.3",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "rollup-plugin-styles": "^4.0.0"
+  }
+}
