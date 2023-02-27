@@ -75,6 +75,9 @@ const buildNom = (articles) => {
 }
 
 const nomBuilder = (articles) => {
+    if (nom.length > 0) {
+        return nom;
+    }
     buildNom(articles)
     return nom;
 }
