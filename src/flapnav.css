@@ -23,12 +23,13 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 0 10px 30px;
-    font-family: var(--font-default);
+    font-family: 'EB Garamond', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 16px;
     font-weight: 500;
     color: rgba(var(--color-default-rgb), 1);
     white-space: nowrap;
     transition: 0.3s;
+    text-decoration: none;
   }
 
   .flap-navbar a i,
@@ -44,21 +45,21 @@
   .flap-navbar .active,
   .flap-navbar .active:focus,
   .flap-navbar li:hover>a {
-    color: var(--color-default);
+    color: inherit;
   }
 
   .flap-navbar .getstarted,
   .flap-navbar .getstarted:focus {
-    background: var(--color-primary);
+    background: #FFFFFF;
     padding: 8px 20px;
     margin-left: 30px;
     border-radius: 4px;
-    color: var(--color-white);
+    color: #FFFFFF;
   }
 
   .flap-navbar .getstarted:hover,
   .flap-navbar .getstarted:focus:hover {
-    color: var(--color-white);
+    color: #FFFFFF;
     background: rgba(var(--color-primary-rgb), 0.8);
   }
 
@@ -72,7 +73,7 @@
     z-index: 99;
     opacity: 0;
     visibility: hidden;
-    background: var(--color-white);
+    background: #FFFFFF;
     box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
     transition: 0.3s;
     border-radius: 4px;
@@ -87,6 +88,7 @@
     font-size: 15px;
     text-transform: none;
     font-weight: 400;
+    text-decoration: none;
   }
 
   .flap-navbar .dropdown ul a i {
@@ -96,7 +98,7 @@
   .flap-navbar .dropdown ul a:hover,
   .flap-navbar .dropdown ul .active:hover,
   .flap-navbar .dropdown ul li:hover>a {
-    color: var(--color-primary);
+    color: inherit;
   }
 
   .flap-navbar .dropdown:hover>ul {
@@ -168,7 +170,7 @@ i.fi-x {
     padding: 10px 0;
     margin: 0;
     border-radius: 10px;
-    background-color: var(--color-white);
+    background-color: #FFFFFF;
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
@@ -180,10 +182,10 @@ i.fi-x {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    font-family: var(--font-primary);
+    font-family: 'EB Garamond', serif;
     font-size: 15px;
     font-weight: 600;
-    color: var(--color-primary);
+    color: #000000;
     white-space: nowrap;
     transition: 0.3s;
   }
@@ -201,7 +203,7 @@ i.fi-x {
   .flap-navbar .active,
   .flap-navbar .active:focus,
   .flap-navbar li:hover>a {
-    color: var(--color-primary);
+    color: #747373;
   }
 
   .flap-navbar .dropdown ul,
@@ -211,9 +213,9 @@ i.fi-x {
     z-index: 99;
     padding: 10px 0;
     margin: 10px 20px;
-    background: var(--color-white);
+    background: #FFFFFF;
     transition: all 0.5s ease-in-out;
-    box-shadow: 0px 0px 30px rgba(var(--color-black-rgb), 0.1);
+    box-shadow: 0px 0px 30px rgba(0,0,0, 0.1);
   }
 
   .flap-navbar .dropdown>.dropdown-active,
@@ -233,7 +235,7 @@ i.fi-x {
   }
 
   .mobile-flap-nav-toggle.fi-x {
-    color: var(--color-black);
+    color: #000000;
   }
 
   .mobile-flap-nav-active {
@@ -245,7 +247,7 @@ i.fi-x {
     top: 21px;
     right: 24px;
     z-index: 9999;
-    color: var(--color-white);
+    color: #FFFFFF;
     width: 30px;
     height: 30px;
   }

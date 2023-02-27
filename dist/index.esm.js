@@ -75,6 +75,9 @@ var buildNom = function buildNom(articles) {
   });
 };
 var nomBuilder = function nomBuilder(articles) {
+  if (nom.length > 0) {
+    return nom;
+  }
   buildNom(articles);
   return nom;
 };

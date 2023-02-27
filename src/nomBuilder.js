@@ -70,11 +70,13 @@ const buildNom = (articles) => {
 
         // every entry starts with one, or more, dropdowns, then ends with a leaf
         buildNomDropdownList(nav, d)
-
     });
 }
 
 const nomBuilder = (articles) => {
+    // global vars are kept in scope
+    // strict mode will cause this function to be called twice, therefore, appending double leaf nodes
+    // if the nom was already walked, just return it
     if (nom.length > 0) {
         return nom;
     }
