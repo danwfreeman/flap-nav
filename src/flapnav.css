@@ -188,6 +188,7 @@ i.fi-x {
     color: #000000;
     white-space: nowrap;
     transition: 0.3s;
+    text-decoration: none;
   }
 
   .flap-navbar a i,
@@ -203,7 +204,7 @@ i.fi-x {
   .flap-navbar .active,
   .flap-navbar .active:focus,
   .flap-navbar li:hover>a {
-    color: #747373;
+    color: #000000;
   }
 
   .flap-navbar .dropdown ul,
