@@ -26,7 +26,7 @@
     font-family: 'EB Garamond', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 16px;
     font-weight: 500;
-    color: rgba(var(--color-default-rgb), 1);
+    color: rgba(33, 37, 41, 1);
     white-space: nowrap;
     transition: 0.3s;
     text-decoration: none;
@@ -60,7 +60,7 @@
   .flap-navbar .getstarted:hover,
   .flap-navbar .getstarted:focus:hover {
     color: #FFFFFF;
-    background: rgba(var(--color-primary-rgb), 0.8);
+    background: rgba(33, 37, 41, 0.8);
   }
 
   .flap-navbar .dropdown ul {
@@ -257,7 +257,7 @@ i.fi-x {
     position: fixed;
     overflow: hidden;
     inset: 0;
-    background: rgba(var(--color-black-rgb), 0.6);
+    background: rgba(0,0,0, 0.6);
     transition: 0.3s;
   }
 
