@@ -45,7 +45,7 @@ Using a json config file, build an HTML navigation menu for use in any React bas
       "title": "chocolate chip cookies",
       "mdfile": "cookies.md"
     }
-  ];
+  ]
 
 ```
 
