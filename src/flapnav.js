@@ -68,16 +68,18 @@ const FlapNav = (props) => {
 
     nom = nomBuilder(data)
 
-    // all root elements are dropdowns, so we know they have children
+    // if root elements is a leaf, then jsut render it and move on, otherwise it's a dropdown and we know it has children
     nom.forEach((e) => {
-      nav.push(buildDropdown(e, e.children))
+      if (e.type === 'leaf'){
+        nav.push(buildLeaf(e))
+      } else {
+        nav.push(buildDropdown(e, e.children))
+      }      
     })
 
     return (
       <ul>
-        <li><a href="/">Home</a></li>
         {nav}
-        <li><a href="/contact">Contact</a></li>
       </ul>
     )
   }

@@ -25,9 +25,11 @@
       var leaf = {
         type: 'leaf',
         name: spec.title,
-        href: '/post/' + spec.mdfile.replace('.md', '')
+        href: spec.href
       };
-      if (node.children != null) {
+      if (node === null) {
+        nom.push(leaf);
+      } else if (node.children != null) {
         node.children.push(leaf);
       } else {
         node.children = [leaf];
@@ -74,8 +76,12 @@
       articles.forEach(function (d) {
         var nav = d.nav;
 
-        // every entry starts with one, or more, dropdowns, then ends with a leaf
-        buildNomDropdownList(nav, d);
+        // every entry starts with either a leaf or one, or more, dropdowns, then ends with a leaf
+        if (nav.length === 0) {
+          buildNomLeaf(null, d); // null here specifies root leaf node
+        } else {
+          buildNomDropdownList(nav, d);
+        }
       });
     };
     var nomBuilder = function nomBuilder(articles) {
@@ -147,15 +153,15 @@
       var buildNav = function buildNav() {
         nom = nomBuilder(data);
 
-        // all root elements are dropdowns, so we know they have children
+        // if root elements is a leaf, then jsut render it and move on, otherwise it's a dropdown and we know it has children
         nom.forEach(function (e) {
-          nav.push(buildDropdown(e, e.children));
+          if (e.type === 'leaf') {
+            nav.push(buildLeaf(e));
+          } else {
+            nav.push(buildDropdown(e, e.children));
+          }
         });
-        return /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-          href: "/"
-        }, "Home")), nav, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-          href: "/contact"
-        }, "Contact")));
+        return /*#__PURE__*/React.createElement("ul", null, nav);
       };
       return /*#__PURE__*/React.createElement("div", {
         "class": "flap-nav-container"

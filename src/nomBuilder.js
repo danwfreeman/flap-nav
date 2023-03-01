@@ -18,8 +18,10 @@ const nomContains = (model, navName) => {
 
 
 const buildNomLeaf = (node, spec) => {
-    let leaf = { type: 'leaf', name: spec.title, href: '/post/' + spec.mdfile.replace('.md', '') }
-    if (node.children != null) {
+    let leaf = { type: 'leaf', name: spec.title, href: spec.href }
+    if (node === null) {
+        nom.push(leaf)
+    } else if (node.children != null) {
         node.children.push(leaf)
     } else {
         node.children = [leaf]
@@ -68,8 +70,12 @@ const buildNom = (articles) => {
     articles.forEach((d) => {
         let nav = d.nav;
 
-        // every entry starts with one, or more, dropdowns, then ends with a leaf
-        buildNomDropdownList(nav, d)
+        // every entry starts with either a leaf or one, or more, dropdowns, then ends with a leaf
+        if (nav.length === 0) {
+            buildNomLeaf(null, d) // null here specifies root leaf node
+        } else {
+            buildNomDropdownList(nav, d)
+        }
     });
 }
 

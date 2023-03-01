@@ -24,12 +24,17 @@ Using a json config file, build an HTML navigation menu for use in any React bas
 ```json
   [
     {
-      "nav": [
+      "nav": [],  // empty nav structure denotes root link nav item (rather than a dropdown)
+      "title": "Home",
+      "href": "/"
+    },
+    {
+      "nav": [   // nav list, denotes respective number of levels of dropdowns
         "weather",  
         "nyc weather"
       ],
-      "title": "10 day forecast",
-      "mdfile": "weather.md"
+      "title": "10 day forecast",  // title is the name of the final link with assoicated href
+      "href": "https://weather.com" // can be any valid href value
     },
     {
       "nav": [
@@ -38,7 +43,7 @@ Using a json config file, build an HTML navigation menu for use in any React bas
         "storm watch"
       ],
       "title": "nyc storms",
-      "mdfile": "storms.md"
+      "href": "/post/storms.html"
     },
     {
       "nav": [
@@ -46,8 +51,13 @@ Using a json config file, build an HTML navigation menu for use in any React bas
         "cookies"
       ],
       "title": "chocolate chip cookies",
-      "mdfile": "cookies.md"
+      "href": "/post/cookies.html"
     }
+    {
+      "nav": [],  
+      "title": "Contact",
+      "href": "/contact"
+    },    
   ]
 
 ```
@@ -82,15 +92,16 @@ const data = require('../data/data.json');
 
 const navData = [
   {
+    // ...
     {
-      "nav": [
+      "nav": [   
         "weather",  
         "nyc weather"
       ],
-      "title": "10 day forecast",
-      "mdfile": "weather.md"
+      "title": "10 day forecast",  
+      "href": "https://weather.com" 
     },
-    /// etc...
+    // etc...
   }
 ]
 
@@ -110,10 +121,6 @@ const Header = (props) => {
 
 ## Demo
 - see `flap-nav` in action at Freebird's [blog site](https://ironbirdlife.org)
-
-## Future Enhancements
-- replace `mdfile` entry with `url` (excuse my pending refactor)
-- add top level non dropdown items so the user can add links like `Home` and `Contact` shown above (currently those are hard coded in the nav bundle)
 
 
 [link-license]: ./blob/master/LICENSE
