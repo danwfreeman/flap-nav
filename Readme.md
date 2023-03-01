@@ -29,12 +29,12 @@ Using a json config file, build an HTML navigation menu for use in any React bas
       "href": "/"
     },
     {
-      "nav": [   // nav list, denotes respective number of levels of dropdowns
+      "nav": [  // nav list, denotes respective number of levels of dropdowns
         "weather",  
         "nyc weather"
       ],
       "title": "10 day forecast",  // title is the name of the final link with assoicated href
-      "href": "https://weather.com" // can be any valid href value
+      "href": "https://weather.com"  // can be any valid href value
     },
     {
       "nav": [
