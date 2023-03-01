@@ -6,6 +6,13 @@
 Using a json config file, build an HTML navigation menu for use in any React based website.
 
 
+<a href="https://www.npmjs.com/package/flap-nav">View on npmjs.org</a> ![https://img.shields.io/npm/v/flap-nav.svg](https://www.npmjs.com/package/flap-nav)
+
+<a href="https://img.shields.io/github/license/serverless-heaven/serverless-webpack.svg">MIT</a>
+
+
+
+
 ## Builds a Navigation Object Model (NOM) from the JSON config
 
 - the Nom is an abstract tree built from the more intuitive and user friendly json config
