@@ -6,9 +6,9 @@
 Using a json config file, build an HTML navigation menu for use in any React based website.
 
 
-<a href="https://www.npmjs.com/package/flap-nav">View on npmjs.org</a> ![https://img.shields.io/npm/v/flap-nav.svg](https://www.npmjs.com/package/flap-nav)
+<a href="https://www.npmjs.com/package/flap-nav">View on npmjs.org</a> ![https://www.npmjs.com/package/flap-nav](https://img.shields.io/npm/v/flap-nav.svg)
 
-<a href="https://img.shields.io/github/license/serverless-heaven/serverless-webpack.svg">MIT</a>
+<img src="https://img.shields.io/github/license/serverless-heaven/serverless-webpack.svg"/>
 
 
 
@@ -118,3 +118,7 @@ const Header = (props) => {
 ## Future Enhancements
 - replace `mdfile` entry with `url` (excuse my pending refactor)
 - add top level non dropdown items so the user can add links like `Home` and `Contact` shown above (currently those are hard coded in the nav bundle)
+
+
+[link-license]: ./blob/master/LICENSE
+[link-npm]: https://www.npmjs.com/package/flap-nav
