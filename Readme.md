@@ -1,7 +1,6 @@
 # React Module Navigation System
 
-[![License][ico-license]][link-license]
-[![NPM][ico-npm]][link-npm]
+
 
 Using a json config file, build an HTML navigation menu for use in any React based website.
 
@@ -10,7 +9,7 @@ Using a json config file, build an HTML navigation menu for use in any React bas
 
 <img src="https://img.shields.io/github/license/serverless-heaven/serverless-webpack.svg"/>
 
-
+[![npm version](https://badge.fury.io/js/flap-nav.svg)](https://badge.fury.io/js/flap-nav)
 
 
 ## Builds a Navigation Object Model (NOM) from the JSON config
