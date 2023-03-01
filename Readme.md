@@ -21,7 +21,7 @@ Using a json config file, build an HTML navigation menu for use in any React bas
 
 
 
-```json
+```javascript
   [
     {
       "nav": [],  // empty nav structure denotes root link nav item (rather than a dropdown)
@@ -82,7 +82,7 @@ npm i flap-nav
 
 ES6-style usage:
 
-```jsx
+```javascript
 import FlapNav from 'flap-nav';
 
 
