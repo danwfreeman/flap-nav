@@ -1,10 +1,9 @@
 # React Module Navigation System
 
+[![License][ico-license]][link-license]
+[![NPM][ico-npm]][link-npm]
+
 Using a json config file, build an HTML navigation menu for use in any React based website.
-
-
-<a href="https://www.npmjs.com/package/flap-nav">View on npmjs.org</a>
-
 
 
 ## Builds a Navigation Object Model (NOM) from the JSON config
