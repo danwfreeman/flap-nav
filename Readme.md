@@ -8,7 +8,7 @@ With a JSON config file, build an HTML navigation menu for use in any React base
 
 [![Package Version](https://img.shields.io/npm/v/flap-nav.svg)](https://www.npmjs.com/package/flap-nav)
 [![License](https://img.shields.io/github/license/danwfreeman/flap-nav)](https://github.com/danwfreeman/flap-nav/blob/main/LICENSE)
-[![Downloads](https://img.shields.io/npm/dm/flap-nav.svg)](http://npm-stat.com/charts.html?package=flap-nav&author=&from=02-25-2023&to=)
+[![Downloads](https://img.shields.io/npm/dm/flap-nav.svg)](http://npm-stat.com/charts.html?package=flap-nav&author=&from=02-23-2023&to=)
 
 
 ## Builds a Navigation Object Model (NOM) from the JSON config
