@@ -1,6 +1,6 @@
 {
   "name": "flap-nav",
-  "version": "1.1.1",
+  "version": "1.1.3",
   "description": "Build a navigation menu from a json config",
   "main": "dist/index.cjs.js",
   "module": "dist/index.cjs.js",
@@ -12,7 +12,10 @@
     "url": "git+https://github.com/danwfreeman/flap-nav.git"
   },  
   "keywords": [
+    "react",
+    "simple",
     "navigation",
+    "bar",
     "html",
     "css",
     "json",

@@ -1,7 +1,9 @@
 # React Module Navigation System
 
 
-Using a json config file, build an HTML navigation menu for use in any React based website.
+A simple, easy to configure, responsive navigation menu system.
+
+With a JSON config file, build an HTML navigation menu for use in any React based website.
 
 
 [![Package Version](https://img.shields.io/npm/v/flap-nav.svg)](https://www.npmjs.com/package/flap-nav)
@@ -11,10 +13,10 @@ Using a json config file, build an HTML navigation menu for use in any React bas
 
 ## Builds a Navigation Object Model (NOM) from the JSON config
 
-- the Nom is an abstract tree built from the more intuitive and user friendly json config
-- the Nom tree is walked and HTML code is produced
-- this package could be extended to build the navigation menu for any user interface other than HTML
-- fully responsive for all tablet and mobile device viewports
+- The Nom is an abstract tree built from the more intuitive, user friendly, JSON config
+- The Nom tree is recursively walked and HTML code is produced
+- Fully responsive for all tablet and mobile device viewports
+- Leverage the NOM to extend this system to render a navigation menu for any user interface other than HTML
 
 
 ## Example JSON Config:
@@ -33,7 +35,7 @@ Using a json config file, build an HTML navigation menu for use in any React bas
         "weather",  
         "nyc weather"
       ],
-      "title": "10 day forecast",  // title is the name of the final link with assoicated href
+      "title": "10 day forecast",  // title is the name of the final link with associated href
       "href": "https://weather.com"  // can be any valid href value
     },
     {
@@ -66,6 +68,9 @@ Using a json config file, build an HTML navigation menu for use in any React bas
 
 ![flap nav from json](/docs/flap-nav-rendered.png)
 
+### And equivalent responsive mobile view
+
+![mobile flap nav from json](/docs/flap-nav-mobile-rendered.png)
 
 
 ## Installation
