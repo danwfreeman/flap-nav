@@ -1,9 +1,9 @@
 # React Module Navigation System
 
 
-A simple, easy to configure, responsive navigation menu system.
+React responsive navigation menu.  The simplest configuration, easy to use.
 
-With a JSON config file, build an HTML navigation menu for use in any React based website.
+With a JSON config file, build an HTML navigation menu for use in any React based website.  No more editing HTML or nested jsx code when your navigation menu items change.  Instead, edit the intuitive JSON config.  
 
 
 [![Package Version](https://img.shields.io/npm/v/flap-nav.svg)](https://www.npmjs.com/package/flap-nav)
