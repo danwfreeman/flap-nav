@@ -1,7 +1,7 @@
 {
   "name": "flap-nav",
   "version": "1.1.4",
-  "description": "Build a navigation menu from a json config",
+  "description": "React responsive navigation menu component.  The simplest configuration, easy to use.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.cjs.js",
   "scripts": {
