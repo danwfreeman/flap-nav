@@ -12,15 +12,14 @@
     "url": "git+https://github.com/danwfreeman/flap-nav.git"
   },  
   "keywords": [
-    "navigation",
     "react",    
-    "menu",
+    "navigation",
+    "navbar",    
     "simple",
+    "menu",
     "responsive",
-    "system",    
-    "navbar",
-    "html",
-    "css",
+    "component",
+    "system",   
     "json",    
     "nom"
   ],
