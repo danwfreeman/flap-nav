@@ -119,16 +119,19 @@ var FlapNav = function FlapNav(props) {
   var buildDropdown = function buildDropdown(e, children) {
     var col = buildNavColumn(children, []);
     return /*#__PURE__*/React.createElement("li", {
-      "class": "dropdown"
+      className: "dropdown",
+      key: e.name
     }, /*#__PURE__*/React.createElement("a", {
       href: "#",
       onClick: toggleNavMenuItem
     }, /*#__PURE__*/React.createElement("span", null, e.name), /*#__PURE__*/React.createElement("i", {
-      "class": "fi fi-chevron-down dropdown-indicator"
+      className: "fi fi-chevron-down dropdown-indicator"
     })), /*#__PURE__*/React.createElement("ul", null, col));
   };
   var buildLeaf = function buildLeaf(e) {
-    return /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    return /*#__PURE__*/React.createElement("li", {
+      key: e.name
+    }, /*#__PURE__*/React.createElement("a", {
       href: e.href
     }, e.name));
   };
@@ -160,16 +163,16 @@ var FlapNav = function FlapNav(props) {
     return /*#__PURE__*/React.createElement("ul", null, nav);
   };
   return /*#__PURE__*/React.createElement("div", {
-    "class": "flap-nav-container"
+    className: "flap-nav-container"
   }, /*#__PURE__*/React.createElement("nav", {
     id: "flap-navbar",
-    "class": "flap-navbar"
+    className: "flap-navbar"
   }, buildNav()), /*#__PURE__*/React.createElement("div", {
-    "class": "position-relative"
+    className: "position-relative"
   }, /*#__PURE__*/React.createElement("i", {
-    "class": "fi fi-list mobile-flap-nav-toggle",
+    className: "fi fi-list mobile-flap-nav-toggle",
     onClick: toggleNavMenu
   })));
 };
 
-export { FlapNav as default };
+export { FlapNav, nomBuilder as NomBuilder };

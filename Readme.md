@@ -88,7 +88,7 @@ npm i flap-nav
 ES6-style usage:
 
 ```javascript
-import FlapNav from 'flap-nav';
+import {FlapNav} from 'flap-nav';
 
 
 const data = require('../data/data.json');
@@ -113,7 +113,7 @@ const navData = [
 const Header = (props) => {
 
   return (
-    <header id="header" class="flex stretch">
+    <header id="header" className="flex stretch">
       <div>
         <FlapNav data={data} />
       </div>
@@ -123,6 +123,86 @@ const Header = (props) => {
 }
 
 ```
+
+## For usage outside of an HTML app (for example React Native)
+
+```javascript
+import {NomBuilder} from 'flap-nav';
+
+const data = require('../data/data.json');
+
+// Abstract tree of your navigation model, iterate over to build iOS or Android menu systems, for example with React Native
+// Or, for use with any Node app.
+// See flapnav.js for a recursive pattern to iterate over your Nom and build your menu
+const myNavNom = NomBuilder(data); 
+
+
+// The Nom for the example data structure above:
+
+[
+    {
+        "type": "leaf",
+        "name": "Homepage",
+        "href": "https://google.com"
+    },
+    {
+        "type": "dropdown",
+        "name": "weather",
+        "children": [
+            {
+                "type": "dropdown",
+                "name": "nyc weather",
+                "children": [
+                    {
+                        "type": "leaf",
+                        "name": "10 day forecast",
+                        "href": "/post/forecast.md"
+                    },
+                    {
+                        "type": "dropdown",
+                        "name": "storm watch",
+                        "children": [
+                            {
+                                "type": "leaf",
+                                "name": "nyc storms",
+                                "href": "some.html"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "dropdown",
+        "name": "food",
+        "children": [
+            {
+                "type": "dropdown",
+                "name": "cookies",
+                "children": [
+                    {
+                        "type": "leaf",
+                        "name": "chocolate chip cookies",
+                        "href": "some.html"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "leaf",
+        "name": "ContactMe",
+        "href": "some.html"
+    }
+]
+
+
+```
+
+
+
+
 
 ## Demo
 - see `flap-nav` in action at Freebird's [blog site](https://ironbirdlife.org)

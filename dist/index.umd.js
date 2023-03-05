@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('react')) :
-    typeof define === 'function' && define.amd ? define(['react'], factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.FlapNav = factory(global.React));
-})(this, (function (React) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react')) :
+    typeof define === 'function' && define.amd ? define(['exports', 'react'], factory) :
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.FlapNav = {}, global.React));
+})(this, (function (exports, React) { 'use strict';
 
     var nom = [];
 
@@ -123,16 +123,19 @@
       var buildDropdown = function buildDropdown(e, children) {
         var col = buildNavColumn(children, []);
         return /*#__PURE__*/React.createElement("li", {
-          "class": "dropdown"
+          className: "dropdown",
+          key: e.name
         }, /*#__PURE__*/React.createElement("a", {
           href: "#",
           onClick: toggleNavMenuItem
         }, /*#__PURE__*/React.createElement("span", null, e.name), /*#__PURE__*/React.createElement("i", {
-          "class": "fi fi-chevron-down dropdown-indicator"
+          className: "fi fi-chevron-down dropdown-indicator"
         })), /*#__PURE__*/React.createElement("ul", null, col));
       };
       var buildLeaf = function buildLeaf(e) {
-        return /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+        return /*#__PURE__*/React.createElement("li", {
+          key: e.name
+        }, /*#__PURE__*/React.createElement("a", {
           href: e.href
         }, e.name));
       };
@@ -164,18 +167,19 @@
         return /*#__PURE__*/React.createElement("ul", null, nav);
       };
       return /*#__PURE__*/React.createElement("div", {
-        "class": "flap-nav-container"
+        className: "flap-nav-container"
       }, /*#__PURE__*/React.createElement("nav", {
         id: "flap-navbar",
-        "class": "flap-navbar"
+        className: "flap-navbar"
       }, buildNav()), /*#__PURE__*/React.createElement("div", {
-        "class": "position-relative"
+        className: "position-relative"
       }, /*#__PURE__*/React.createElement("i", {
-        "class": "fi fi-list mobile-flap-nav-toggle",
+        className: "fi fi-list mobile-flap-nav-toggle",
         onClick: toggleNavMenu
       })));
     };
 
-    return FlapNav;
+    exports.FlapNav = FlapNav;
+    exports.NomBuilder = nomBuilder;
 
 }));

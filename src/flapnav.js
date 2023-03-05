@@ -5,7 +5,7 @@ import './flapnav.css';
 const FlapNav = (props) => {
 
   const { data } = props
-  
+
   let nom = []; // navigation object model
   let nav = []; // navigation html
 
@@ -30,10 +30,10 @@ const FlapNav = (props) => {
     const col = buildNavColumn(children, [])
 
     return (
-      <li class="dropdown">
+      <li className="dropdown" key={e.name}>
         <a href="#" onClick={toggleNavMenuItem}>
           <span>{e.name}</span>
-          <i class="fi fi-chevron-down dropdown-indicator"></i>
+          <i className="fi fi-chevron-down dropdown-indicator"></i>
         </a>
         <ul>
           {col}
@@ -44,7 +44,7 @@ const FlapNav = (props) => {
 
   const buildLeaf = (e) => {
     return (
-      <li>
+      <li key={e.name}>
         <a href={e.href}>{e.name}</a>
       </li>
     )
@@ -70,11 +70,11 @@ const FlapNav = (props) => {
 
     // if root elements is a leaf, then jsut render it and move on, otherwise it's a dropdown and we know it has children
     nom.forEach((e) => {
-      if (e.type === 'leaf'){
+      if (e.type === 'leaf') {
         nav.push(buildLeaf(e))
       } else {
         nav.push(buildDropdown(e, e.children))
-      }      
+      }
     })
 
     return (
@@ -86,13 +86,13 @@ const FlapNav = (props) => {
 
 
   return (
-    <div class="flap-nav-container">
-      <nav id="flap-navbar" class="flap-navbar">
+    <div className="flap-nav-container">
+      <nav id="flap-navbar" className="flap-navbar">
         {buildNav()}
       </nav>
-      <div class="position-relative">
+      <div className="position-relative">
 
-        <i class="fi fi-list mobile-flap-nav-toggle" onClick={toggleNavMenu}></i>
+        <i className="fi fi-list mobile-flap-nav-toggle" onClick={toggleNavMenu}></i>
 
       </div>
 

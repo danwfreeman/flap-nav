@@ -1,3 +1,4 @@
 import FlapNav from './flapnav'
+import nomBuilder from './nomBuilder';
 
-export default FlapNav;
+export { FlapNav, nomBuilder as NomBuilder };
