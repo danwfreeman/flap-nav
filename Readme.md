@@ -15,7 +15,7 @@ With a JSON config file, build an HTML navigation menu for use in any React base
 ## Benefits:
 - Quickly make changes to the normalized, non-verbose JSON, focus on your content and not code syntax
 - Because of the uniquely designed structure of the JSON config, adding/changing navigation menu items is intitive and faster than the tradional positional, parent-child stucture, which involves a tedious restructing of nodes.  No other system is this simple and flexible.
-- ChatGPT will not come up with this!
+- And no, ChatGPT will not come up with this!  :)
 - Fully responsive for all tablet and mobile device viewports
 
 ## Functional Details
@@ -147,6 +147,7 @@ const data = require('../data/data.json');
 // Or, for use with any Node app.
 // See flapnav.js for a recursive pattern to iterate over your Nom and build your menu
 const myNavNom = NomBuilder(data); 
+```
 
 [link-license]: ./blob/master/LICENSE
 [link-npm]: https://www.npmjs.com/package/flap-nav
