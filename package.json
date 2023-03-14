@@ -1,6 +1,6 @@
 {
   "name": "flap-nav",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "React responsive navigation menu component.  The simplest configuration, easy to use.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.cjs.js",

@@ -11,17 +11,21 @@ With a JSON config file, build an HTML navigation menu for use in any React base
 [![Downloads](https://img.shields.io/npm/dm/flap-nav.svg)](http://npm-stat.com/charts.html?package=flap-nav&author=&from=02-23-2023&to=)
 
 
-## Builds a Navigation Object Model (NOM) from the JSON config
 
-- The Nom is an abstract tree built from the more intuitive, user friendly, JSON config
+## Benefits:
 - Quickly make changes to the normalized, non-verbose JSON, focus on your content and not code syntax
-- The Nom tree is recursively walked and HTML code is produced
+- Because of the uniquely designed structure of the JSON config, adding/changing navigation menu items is intitive and faster than the tradional positional, parent-child stucture, which involves a tedious restructing of nodes.  No other system is this simple and flexible.
+- ChatGPT will not come up with this!
 - Fully responsive for all tablet and mobile device viewports
-- Leverage the Nom to extend this system to render a navigation menu for any user interface other than HTML
+
+## Functional Details
+- Builds a Navigation Object Model (NOM) from the JSON config
+- The Nom is an abstract tree built from the more intuitive, user friendly, JSON config
+- The Nom tree is recursively walked and HTML code is produced
+- Additional abstraction layer - leverage the Nom to extend this system to render a navigation menu for platforms other than web
 
 
 ## Example JSON Config:
-
 
 
 ```javascript
@@ -125,7 +129,14 @@ const Header = (props) => {
 
 ```
 
-## For usage outside of an HTML app (for example React Native)
+
+
+## Demo
+- see `flap-nav` in action at Freebird's [blog site](https://ironbirdlife.org)
+
+
+
+## For usage with React Native
 
 ```javascript
 import {NomBuilder} from 'flap-nav';
@@ -136,78 +147,6 @@ const data = require('../data/data.json');
 // Or, for use with any Node app.
 // See flapnav.js for a recursive pattern to iterate over your Nom and build your menu
 const myNavNom = NomBuilder(data); 
-
-
-// The Nom for the example data structure above:
-
-[
-    {
-        "type": "leaf",
-        "name": "Homepage",
-        "href": "https://google.com"
-    },
-    {
-        "type": "dropdown",
-        "name": "weather",
-        "children": [
-            {
-                "type": "dropdown",
-                "name": "nyc weather",
-                "children": [
-                    {
-                        "type": "leaf",
-                        "name": "10 day forecast",
-                        "href": "/post/forecast.md"
-                    },
-                    {
-                        "type": "dropdown",
-                        "name": "storm watch",
-                        "children": [
-                            {
-                                "type": "leaf",
-                                "name": "nyc storms",
-                                "href": "some.html"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "type": "dropdown",
-        "name": "food",
-        "children": [
-            {
-                "type": "dropdown",
-                "name": "cookies",
-                "children": [
-                    {
-                        "type": "leaf",
-                        "name": "chocolate chip cookies",
-                        "href": "some.html"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "type": "leaf",
-        "name": "ContactMe",
-        "href": "some.html"
-    }
-]
-
-
-```
-
-
-
-
-
-## Demo
-- see `flap-nav` in action at Freebird's [blog site](https://ironbirdlife.org)
-
 
 [link-license]: ./blob/master/LICENSE
 [link-npm]: https://www.npmjs.com/package/flap-nav
