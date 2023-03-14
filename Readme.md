@@ -22,7 +22,7 @@ With a JSON config file, build an HTML navigation menu for use in any React base
 - Builds a Navigation Object Model (NOM) from the JSON config
 - The Nom is an abstract tree built from the more intuitive, user friendly, JSON config
 - The Nom tree is recursively walked and HTML code is produced
-- Additional abstraction layer - leverage the Nom to extend this system to render a navigation menu for platforms other than web
+- Additional abstraction layer - leverage the NOM to extend this system to render a navigation menu for platforms other than web
 
 
 ## Example JSON Config:
