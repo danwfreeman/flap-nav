@@ -1,5 +1,4 @@
-import styles from "rollup-plugin-styles";
-const autoprefixer = require('autoprefixer');
+import postcss from 'rollup-plugin-postcss'
 import babel from '@rollup/plugin-babel';
 
 // the entry point for the library
@@ -19,8 +18,6 @@ var MODE = [
 ]
 
 
-
-
 var config = []
 
 
@@ -32,10 +29,13 @@ MODE.map((m) => {
             name: "FlapNav",
             file: `dist/index.${m.fomart}.js`,
             format: m.fomart,
-            exports: "auto"
+            exports: "auto",
+            globals: {
+              react: 'React'
+            }
         },
         // this externelizes react to prevent rollup from compiling it
-        external: ["react", /@babel\/runtime/],
+        external: ["react", /@babel\/runtime/, 'react-dom'],
         plugins: [
             // these are babel comfigurations
             babel({
@@ -43,16 +43,19 @@ MODE.map((m) => {
                 plugins: ['@babel/transform-runtime'],
                 babelHelpers: 'runtime'
             }),
+            postcss({
+              
+            })
             // this adds sourcemaps
             //sourcemaps(),
             // this adds support for styles
-            styles({
-                postcss: {
-                    plugins: [
-                        autoprefixer()
-                    ]
-                }
-            })
+            // styles({
+            //     postcss: {
+            //         plugins: [
+            //             autoprefixer()
+            //         ]
+            //     }
+            // })
         ]
     }
     config.push(conf)
